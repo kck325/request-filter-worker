@@ -1,0 +1,15 @@
+name = "request-filter-worker"
+main = "src/indexx.js"
+compatibility_date = "2023-01-01"
+
+[triggers]
+crons = ["* * * * *"]
+
+[[d1_databases]]
+binding = "FILTER_RULES_DB"
+database_name = "filter-rules-db"
+database_id = "b68f0601-e3e1-4335-a0ce-37b410bf7eea"
+
+[[r2_buckets]]
+binding = "REQUEST_LOGS"
+bucket_name = "request-logs"
